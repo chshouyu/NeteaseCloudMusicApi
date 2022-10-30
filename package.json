@@ -8,19 +8,9 @@
     "lint": "eslint \"**/*.{js,ts}\"",
     "lint-fix": "eslint --fix \"**/*.{js,ts}\"",
     "prepare": "husky install",
-    "pkgwin": "pkg . -t node14-win-x64 -o app",
-    "pkglinux": "pkg . -t node14-linux-x64 -o app",
-    "pkgmacos": "pkg . -t node14-macos-x64 -o app",
     "caxamacos": "caxa -i . -o ./dist/app -e '*' '.*' '!module' '!plugins' '!public' '!static' '!util' '!app.js' '!server.js' '!package.json' -- 'env' 'PORT=8922' '{{caxa}}/node_modules/.bin/node' '{{caxa}}/app.js'"
   },
   "bin": "./app.js",
-  "pkg": {
-    "scripts": "module/*.js",
-    "assets": [
-      "/node_modules/vm2/lib/contextify.js",
-      "/public"
-    ]
-  },
   "keywords": [
     "网易云音乐",
     "网易云",
